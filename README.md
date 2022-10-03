@@ -33,4 +33,4 @@ And these API's can be consumed by the frontend developers.
 - go to this url in browser `http://127.0.0.1:8000/admin/` and login with created user credentials
 
 ## Run tests locally
-- `make tests`
+- `make test`
