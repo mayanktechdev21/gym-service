@@ -94,23 +94,25 @@ WSGI_APPLICATION = "gym_service.wsgi.application"
 # https://docs.djangoproject.com/en/4.1/ref/settings/#databases
 DATABASES = {}
 
-# DATABASES = {
-#     "default": {
-#         "ENGINE": "django.db.backends.sqlite3",
-#         "NAME": BASE_DIR / "db.sqlite3",
-#     }
-# }
+DATABASES = {
+    "default": {
+        "ENGINE": "django.db.backends.sqlite3",
+        "NAME": BASE_DIR / "db.sqlite3",
+    }
+}
 
 
-POSTGRES_USER = os.environ.get("POSTGRES_USER", "postgres")
-POSTGRES_PASSWORD = os.environ.get("POSTGRES_PASSWORD", "postgres")
-POSTGRED_DB_NAME = os.environ.get("POSTGRED_DB_NAME", "gymdb")
-POSTGRES_HOST = os.environ.get("POSTGRES_HOST", "postgres")
+# Docker db setup (postgres) uncomment following lines to run docker with postgres
+
+# POSTGRES_USER = os.environ.get("POSTGRES_USER", "postgres")
+# POSTGRES_PASSWORD = os.environ.get("POSTGRES_PASSWORD", "postgres")
+# POSTGRED_DB_NAME = os.environ.get("POSTGRED_DB_NAME", "gymdb")
+# POSTGRES_HOST = os.environ.get("POSTGRES_HOST", "postgres")
 
 
-DATABASES["default"] = dj_database_url.parse(
-    f"postgres://{POSTGRES_USER}:{POSTGRES_PASSWORD}@{POSTGRES_HOST}/{POSTGRED_DB_NAME}"
-)
+# DATABASES["default"] = dj_database_url.parse(
+#     f"postgres://{POSTGRES_USER}:{POSTGRES_PASSWORD}@{POSTGRES_HOST}/{POSTGRED_DB_NAME}"
+# )
 
 # Password validation
 # https://docs.djangoproject.com/en/4.1/ref/settings/#auth-password-validators
