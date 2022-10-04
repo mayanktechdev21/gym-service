@@ -19,6 +19,8 @@ And these API's can be consumed by the frontend developers.
 ## Setup project locally
 - install docker and docker compose
 - go to the project directory in terminal
+- create .env 
+- run `cp .env.example .env`
 - run the following commands from terminal
 - `make build`
 - `make start`
@@ -34,3 +36,8 @@ And these API's can be consumed by the frontend developers.
 
 ## Run tests locally
 - `make test`
+
+## DB Schema
+
+
+![alt text](./db_schema.png)

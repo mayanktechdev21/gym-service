@@ -28,5 +28,3 @@ jobs:
         isort . -c -v
     - name: Pytest
       run: pytest --nomigrations
-
-
